@@ -143,7 +143,7 @@
         }
         else {
           var dashEncoder = encoder.replace(/\./g,'-')
-          encoderUrl = "https://encoder-" + dashEncoder + ".browserling.com";
+          encoderUrl = "https://encoder-" + dashEncoder + ".myeye.com";
         }
 
         socket = io(
@@ -233,7 +233,7 @@
                   if (connected && !bugHunterActive) {
                     var pos = calcMousePos(ev);
                     socket.emit('sendPointer', {
-                          x : pos.x,
+                          x : pos.x, 
                           y : pos.y,
                           mouseMask : mouseMask
                     });
@@ -386,7 +386,7 @@
       var version = $('#run input[name="version"]').val();
       var url = $('#url input').val();
 
-      var queueUrl = 'https://queue2.browserling.com';
+      var queueUrl = 'https://queue2.myeye.com';
       if (/192.168.1/.test(window.location.href)) {
         queueUrl = 'http://192.168.1.2:7500';
       }
